@@ -23,8 +23,9 @@ jobs:
     runs-on: [self-hosted,web02-server]
     steps:
     - uses: actions/checkout@v3
-    - name: delete artifact
-      run: |
-       rm C:/actions-runner/_work/CICDDemo/CICDDemo  -r -force 
+    - name: Remove artifacts
+      uses: c-hive/gha-remove-artifacts@v1.2.0
+      with:
+        age: '90 seconds'
 
         
