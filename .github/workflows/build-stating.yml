@@ -12,9 +12,10 @@ jobs:
   deploy-to-web01:  
     runs-on: [self-hosted]
     steps:
-    - uses: yasinmagn/CICDDemo/blob/master/.github/workflows/deploy-stating.yml@main
+    - uses: yasinmagn/CICDDemo/.github/workflows/deploy-stating.yml@main
       with:
         runs-on: "[self-hosted,web01]"
+        
     
 
         
