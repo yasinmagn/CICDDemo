@@ -24,8 +24,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Remove artifacts
-      uses: c-hive/gha-remove-artifacts@v1.2.0
-      with:
-        age: '90 seconds'
+      run: Remove-Item -Force -Recurse -Path "$C:/actions-runner/_work/CICDDemo/*"
+
 
         
