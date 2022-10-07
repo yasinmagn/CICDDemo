@@ -5,4 +5,4 @@ jobs:
   call-workflow-1-in-local-repo:
     uses: yasinmagn/CICDDemo/.github/workflows/deploy-stating.yml@master
     with:
-     runs-on: "[self-hosted,web01]"
+     runs-on: "[self-hosted,web01-server]"
