@@ -20,7 +20,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
   deploy-to-web02:  
-    runs-on: [web02-server]
+    runs-on: [self-hosted,web02-server]
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET Core
