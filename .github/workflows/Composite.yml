@@ -1,0 +1,23 @@
+name: Deploy to PreProd server
+on: 
+     workflow_dispatch:
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+env:
+  AppPool: "default"
+  Website: "default"
+  WebAppDirectory: "C:/CICDDemo"  
+jobs:
+  build-and-deploy:  
+    runs-on: [self-hosted,web01-server]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x	
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+     
