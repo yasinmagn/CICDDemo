@@ -1,8 +1,10 @@
 name: use re-usable workflow
 on: 
      workflow_dispatch:
+     
 jobs:
-  call-workflow-1-in-local-repo:
-    uses: yasinmagn/CICDDemo/.github/workflows/deploy-stating.yml@master
-    with:
-     runs-on: "[self-hosted,web01-server]"
+  reusable_workflow_job:
+    runs-on: [self-hosted,web01-server]
+    environment: production
+    steps:
+    - uses: yasinmagn/CICDDemo/.github/workflows/deploy-stating.yml@master
