@@ -9,7 +9,7 @@ env:
   Website: "default"
   WebAppDirectory: "C:/CICDDemo"  
 jobs:
-  build-and-deploy:  
+  deploy-to-web01:  
     runs-on: [self-hosted,web01-server]
     steps:
     - uses: actions/checkout@v3
@@ -19,4 +19,14 @@ jobs:
         dotnet-version: 6.0.x	
     - name: Restore dependencies
       run: dotnet restore
-     
+  deploy-to-web02:  
+    runs-on: [self-hosted,web02-server]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x	
+    - name: Restore dependencies
+      run: dotnet restore
+        
