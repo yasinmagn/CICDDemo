@@ -1,7 +1,6 @@
 name: use re-usable workflow
 on: 
-     workflow_dispatch:
-     
+     workflow_dispatch:    
 jobs:
   reusable_workflow_job:
     runs-on: [self-hosted,web01-server]
