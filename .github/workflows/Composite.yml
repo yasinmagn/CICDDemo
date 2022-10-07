@@ -23,8 +23,8 @@ jobs:
     runs-on: [self-hosted,web02-server]
     steps:
     - uses: actions/checkout@v3
-    - name: Copy old ESS folder as backup
+    - name: delete artifact
       run: |
-       Remove-Item C:/actions-runner/_work/CICDDemo -Force 
+       Remove-Item C:/actions-runner/_work/CICDDemo 
 
         
