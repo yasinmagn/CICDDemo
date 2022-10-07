@@ -15,7 +15,7 @@ on:
 
 jobs:
   triage:
-    runs-on: ${{runs-on}}
+    runs-on: ${{inputs.runs-on}}
     steps:
     - uses: actions/labeler@v4
       with:
