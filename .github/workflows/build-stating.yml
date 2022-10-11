@@ -6,4 +6,4 @@ jobs:
     runs-on: [self-hosted,web01-server]
     environment: production
     steps:
-    - uses: yasinmagn/CICDDemo/tree/master/.github/workflows/composite.yml@main
+    - uses: yasinmagn/CICDDemo/.github/workflows/composite.yml@main
