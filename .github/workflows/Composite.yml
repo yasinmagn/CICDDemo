@@ -1,30 +1,15 @@
-name: Deploy to Staging
-on: 
-     workflow_dispatch:
-concurrency: 
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-env:
-  AppPool: "default"
-  Website: "default"
-  WebAppDirectory: "C:/CICDDemo"  
-jobs:
-  deploy-to-web01:  
-    runs-on: [self-hosted,web01-server]
-    steps:
-    - uses: actions/checkout@v3
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v2
-      with:
-        dotnet-version: 6.0.x	
-    - name: Restore dependencies
-      run: dotnet restore
-  deploy-to-web02:  
-    runs-on: [self-hosted,web02-server]
-    steps:
-    - uses: actions/checkout@v3
-    - name: Remove artifacts
-      run: Remove-Item -Force -Recurse -Path C:/actions-runner/_work/CICDDemo/*
-
-
-        
+name: "Publish to Docker"
+description: "Build a container image and Pushes it to Docker registry"
+inputs:
+  registry_username:
+    description: "Username for image registry"
+    required: false
+runs:
+  using: "composite"
+  steps:
+      - name: Setup BuildX
+        uses: actions/checkout@v3
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: 6.0.x	  
