@@ -7,4 +7,4 @@ jobs:
     runs-on: [self-hosted,web01-server]
     environment: PreProd
     steps:
-    - uses: yasinmagn/CICDDemo/.github/workflows/composite.yml@main
+    - uses: yasinmagn/CICDDemo/action.yml@main
