@@ -1,9 +1,10 @@
-name: use re-usable workflow
+name: Deploy to PreProd server
 on: 
-     workflow_dispatch:    
+     workflow_dispatch:
+
 jobs:
-  reusable_workflow_job:
+  build-and-deploy:  
     runs-on: [self-hosted,web01-server]
-    environment: production
+    environment: PreProd
     steps:
     - uses: yasinmagn/CICDDemo/.github/workflows/composite.yml@main
