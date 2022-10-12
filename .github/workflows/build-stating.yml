@@ -7,4 +7,8 @@ jobs:
     runs-on: [self-hosted,web01-server]
     environment: PreProd
     steps:
-    - uses: yasinmagn/CompositePublish/action.yml@main
+    - uses: yasinmagn/CompositePublish/action.yml@v1
+      
+    
+    
+    
