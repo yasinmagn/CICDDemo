@@ -7,7 +7,7 @@ jobs:
     runs-on: [self-hosted,web01-server]
     environment: PreProd
     steps:
-    - uses: yasinmagn/CICDDemo@main
+    - uses: yasinmagn/CICDDemo@master
       
     
     
