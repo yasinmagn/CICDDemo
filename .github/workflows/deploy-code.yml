@@ -11,7 +11,7 @@ on:
         required: false
 env:
   AppPool: "DefaultAppPool"
-  Website: '"Default Web Site"'
+  Website: "Default Web Site"
 
 jobs:
   build:
@@ -20,4 +20,4 @@ jobs:
     - name: echo data
       run: |
            echo ${{env.AppPool}}
-            echo ""${{env.Website}}""
+            echo '${{env.Website}}'
