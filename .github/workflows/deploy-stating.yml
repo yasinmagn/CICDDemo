@@ -17,4 +17,8 @@ jobs:
   triage:
     runs-on: ${{inputs.runs-on}}
     steps:
-    - uses: actions/labeler@v4
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
