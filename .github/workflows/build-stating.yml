@@ -4,8 +4,8 @@ on:
 
 jobs:
   build-and-deploy:  
-   runs-on: [self-hosted,web01-server]
-   steps:
+    runs-on: [self-hosted,web01-server]
+    steps:
     - name: test
     - uses: yasinmagn/CompositePublish/action.yml@main
       
