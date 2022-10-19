@@ -20,7 +20,7 @@ jobs:
     - name: echo data
       run: |
            echo ${{env.AppPool}}
-            echo '"'${{env.Website}}'"'
+            echo '"'&${{env.Website}}&'"'
     - uses: actions/checkout@v3
 
 
