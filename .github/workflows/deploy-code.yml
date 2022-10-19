@@ -17,11 +17,13 @@ jobs:
     runs-on: ${{ fromJson(inputs.runner-name) }}
     steps:
     - uses: actions/checkout@v3
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 6.0.x
     - name: echo data
       run: |
          echo ${path}
          ${LATEX} ${path}
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+    
