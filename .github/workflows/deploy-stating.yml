@@ -15,7 +15,7 @@ on:
 
 jobs:
   triage:
-    runs-on: ${{inputs.runs-on}}
+    runs-on: ${{inputs.runner-name}}
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
