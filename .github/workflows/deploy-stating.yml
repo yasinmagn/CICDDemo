@@ -11,8 +11,8 @@ on:
         required: false
 
 jobs:
-  triage:
-    runs-on: ${{inputs.runner-name}}
+  build:
+    runs-on: ${{ inputs.runner-name }}
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
