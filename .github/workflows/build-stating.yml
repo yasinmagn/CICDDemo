@@ -4,9 +4,10 @@ on:
 
 jobs:
   build-and-deploy:  
-   uses: yasinmagn/CICDDemo/.github/workflows/deploy-stating.yml@master
-   with:
-    runner-name: "[self-hosted,web01-server]"
+   runs-on: [self-hosted,web01-server]
+   steps:
+    - name: test
+    - uses: yasinmagn/CompositePublish/action.yml@main
       
     
     
