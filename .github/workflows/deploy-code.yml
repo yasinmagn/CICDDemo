@@ -20,12 +20,4 @@ jobs:
     - name: echo data
       run: |
            echo ${{env.AppPool}}
-            echo '"'${{env.Website}}'"'
-    - uses: actions/checkout@v3
-
-
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 6.0.x
-    
+            echo "'"${{env.Website}}"'"
