@@ -10,7 +10,8 @@ on:
       token:
         required: false
 env:
- path: '"Literature Review/Review.tex"'   
+  AppPool: "DefaultAppPool"
+  Website: '"Default Web Site"'
 
 jobs:
   build:
@@ -18,8 +19,8 @@ jobs:
     steps:
     - name: echo data
       run: |
-           echo ${{env.path}}
-           ${LATEX} ${env.path}
+           echo ${{env.AppPool}}
+            echo ${{env.Website}}
     - uses: actions/checkout@v3
 
 
