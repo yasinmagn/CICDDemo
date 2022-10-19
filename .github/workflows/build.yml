@@ -4,7 +4,7 @@ on:
 
 jobs:
   build-and-deploy:  
-   uses: yasinmagn/CICDDemo/.github/workflows/deploy.yml@master
+   uses: yasinmagn/CICDDemo/.github/workflows/deploy-code.yml@master
    with:
     runner-name: "['self-hosted','web01-server']"
 
