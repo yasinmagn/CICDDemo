@@ -8,4 +8,4 @@ jobs:
 
     steps:
      - name: Setup BuildX
-       uses: yasinmagn/CompositePublish/action.yml@main
+       uses: yasinmagn/CompositePublish@main
