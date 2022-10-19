@@ -4,8 +4,8 @@ on:
 
 jobs:
   build-and-deploy:  
-    runs-on: [self-hosted,web01-server]
+   uses: yasinmagn/CICDDemo/.github/workflows/deploy.yml@master
+   with:
+    runner-name: "['self-hosted','web01-server']"
 
-    steps:
-     - name: Setup BuildX
-       uses: yasinmagn/CompositePublish@main
+   
