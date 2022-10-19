@@ -11,7 +11,7 @@ on:
         required: false
 env:
   AppPool: "DefaultAppPool"
-  Website: " 'Default Web Site' "
+  Website: '"Default Web Site"'
 
 jobs:
   build:
