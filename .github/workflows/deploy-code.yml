@@ -15,7 +15,7 @@ env:
 
 jobs:
   build:
-    runs-on: ${{ fromJson(inputs.runner-name) }}
+    runs-on: ${{ (inputs.runner-name) }}
     steps:
     - name: echo data
       run: |
