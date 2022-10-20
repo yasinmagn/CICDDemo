@@ -3,9 +3,14 @@ on:
      workflow_dispatch:
 
 jobs:
-  build-and-deploy:  
+  build-artifact:  
    uses: yasinmagn/CICDDemo/.github/workflows/deploy-code.yml@master
    with:
     runner-name: "['self-hosted','web01-server']"
+  deploy:  
+   uses: yasinmagn/CICDDemo/.github/workflows/deploy-code.yml@master
+   needs: build-artifact
+   with:
+    runner-name: "['self-hosted','web01-server']"  
 
    
